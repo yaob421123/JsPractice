@@ -1,8 +1,9 @@
 ﻿# 使用说明
 
-因js使用到'ajax' 有作用域，所以需要在服务器环境运行或者在'Firefox'上运行
+用jquery 写的一个城市联动插件
+因js使用到`ajax` 有作用域，所以需要在服务器环境运行或者在`Firefox`上运行
 
-## html部分
+## html部分：
 ```bash
 <div class="city_select">
 	<div class="select_prov">
@@ -28,7 +29,7 @@ css部分：
 
 
 ## js部分：
-导入'jquery'库和'select.js'
+导入`jquery`库和`select.js`
 ```bash
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/select2.js"></script>
@@ -37,7 +38,7 @@ $(function(){
 });
 ```
 
-### 可选参数
+## 可选参数：
 ```bash
 $(".city_select").cityselect({
 	selectProv:".select_prov",  //左侧省份菜单下拉框
