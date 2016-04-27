@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/dateSelect.js"></script>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		i{ font-style:normal; }
+		ol,ul,li{ list-style-type:none; }
+		input{ border:none; background: none; }
+		.basic-information-item{margin:50px auto 0 auto; width:450px; height:40px;}
+		.information-loan-date { width:132px;  float:left;margin-right:15px;position:relative;}
+		.information-loan-date .date-select{ width:130px; height:38px; line-height:38px;  border:1px solid #e5e5e5; border-radius:5px;position:relative; z-index:3; behavior:url(../resource/css/PIE.htc);}
+		.information-loan-date input{ float:left;width:60px; line-height:38px; height:38px; padding:0 20px; }
+		.information-loan-date i{ float:right; color:#ff9600; padding-right: 10px;}
+		.information-loan-date ul{ position:absolute; left:0; top:38px; width:130px; border:1px solid #e5e5e5; background-color:#fff; z-index:9; border-top:none;border-radius: 0 0 5px 5px;behavior:url(../resource/css/PIE.htc); max-height:181px; min-height:181px; overflow-y: auto; display:none;}
+		.information-loan-date ul li{ padding-left:20px; line-height:35px; cursor:pointer;}
+		.information-loan-date ul li:hover{ background-color:#f4f4f4; }
+	</style>
+</head>
+<body>
+	<div class="basic-information-item" id="myDate">
+		<div class="information-loan-date">
+			<div class="date-select" id="year">
+				<input type="text" placeholder="2016" readonly="readonly">
+				<i class="iconfont">v</i>
+				<!-- <i class="iconfont">&#xe638;</i> -->
+			</div>
+			<ul>
+			</ul>
+		</div>
+		<div class="information-loan-date">
+			<div class="date-select" id="month">
+				<input type="text" placeholder="01" readonly="readonly">
+				<i class="iconfont">v</i>
+				<!-- <i class="iconfont">&#xe638;</i> -->
+			</div>
+			<ul>
+			</ul>
+		</div>
+		<div class="information-loan-date">
+			<div class="date-select" id="day">
+				<input type="text" placeholder="01" readonly="readonly">
+				<i class="iconfont">v</i>
+				<!-- <i class="iconfont">&#xe638;</i> -->
+			</div>
+			<ul>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$("#myDate").dateSelect();
+		})
+	</script>
+</body>
+</html>
