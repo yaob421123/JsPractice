@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="select.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//搜索区域的下拉框
+	        $(".select_box").select({
+	            /*参数必带*/
+	            "selectShowbox":"select_showbox",/*显示区域class*/
+	            "selectOption":"select_option",/*下拉框区域*/
+	            /*下参数可写可不写*/
+	            "showboxClass":"active",/*显示区域点击后class,默认active*/
+	            "optionClass":"hover"/*下拉列表鼠标移入class，,默认hover*/
+	        });
+		});
+		
+	</script>
+	<style>
+	*{margin:0;padding:0; font-size:14px;}
+	a{text-decoration:none; color:#1a1a1a;}
+	li{list-style-type:none;}
+	body{background-color:#333333;}
+
+	.box{ margin:0 auto; width:100px;  padding-top:50px;}
+
+
+	
+
+.select_box{ font-size:12px;color:#999999;width:98px; text-align:center; line-height:46px;position:relative;}
+.select_showbox{ cursor:pointer; text-indent:1.2em; text-align:left; background:url(select_down.png) no-repeat right 18px center; height:46px; font-size:18px; border:1px solid #e5e5e5; background-color:#ffffff; border-radius:10px;color:#2a2c2e;}
+.select_showbox i{ display:inline; margin-left:5px; margin-top:-2px;}
+.select_showbox.active{background:url(select_up.png) no-repeat right 18px center #ffffff;border-radius:10px 10px 0 0; border-bottom:1px solid transparent; }
+.select_option{border-radius:0 0 10px 10px;border:1px solid #e5e5e5;border-top:1px solid transparent;display:none;left:0px;top:46px;position:absolute;z-index:99; width:96px; background:#fff;}
+.select_option li{width:96px;cursor:pointer;font-size:16px;}
+.select_option li.selected{color:#999;}
+.select_option li.hover{background:#BEBEBE;color:#fff;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="select_box">
+			<div class="select_showbox">职位</div>
+			<ul class="select_option">
+				<li>前台</li>
+				<li>前端</li>
+				<li>后台</li>
+				<li>c++</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
