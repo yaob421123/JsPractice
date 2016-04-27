@@ -1,0 +1,47 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jquery.cityselect.js基于jQuery+JSON的省市联动效果</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/select2.js"></script>
+	<script	type="text/javascript">
+	$(function(){
+		$(".city_select").cityselect();
+	});
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div class="register_input">
+			<div class="register_input_left">工作城市:</div>
+			<div class="register_input_right city_select">
+				<div class="select_prov city_input city1">
+					<span class="select_list_input">
+						<span>请选择省份</span>
+					</span> <!-- <i class="icon_arrow_down iconfont">&#xe602;</i>-->
+					<ul class="city-sf city-hidden">
+						<!-- <li>省份1</li>
+						<li>省份2</li>
+						<li>省份3</li>
+						<li>省份4</li> -->
+					</ul>
+				</div>
+
+				<div class="select_city city_input">
+					<span class="select_list_input ">
+						<span>请选择城市</span>
+					</span> <!-- <i class="icon_arrow_down iconfont">&#xe602;</i>-->
+					<ul class="city-cs city-hidden" disabled="disabled">
+						<!-- <li>城市1</li>
+						<li>城市2</li>
+						<li>城市3</li>
+						<li>城市4</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
