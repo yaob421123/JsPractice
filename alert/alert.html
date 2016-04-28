@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		a{text-decoration:none;}
+		li{list-style-type:none;}
+		input{ width:100px; height:30px; }
+
+
+		
+		#popup_overlay{ width:100%; background-color:#000; background-size:auto auto; position:absolute; background-repeat:repeat; opacity:0.5;filter:alpha(opacity=50); left:0; top:0; z-index:9998;}
+		#popup_container{ width:450px; height:280px; background-color:#fff; position:fixed; left:0; top:0; z-index:9999;}
+		#popup_container .popup_close{ position:absolute;  right:0px; top:0px;  }
+		#popup_container .popup_close a{ display:block;width:50px; height:50px; line-height:50px; text-align:center; font-size:20px;color:#fff;}
+		#popup_container .popup_title{ height:50px; line-height:50px; text-align:center; color:#fff; background-color:#cc0000; font-size:20px; font-weight:600;}
+		#popup_container .popup_content{ width:100%; height:160px; }
+		#popup_container .popup_message{ text-indent:2em; height:160px; padding:0 50px; display: table-cell;vertical-align: middle; }
+		#popup_container .popup_message p{line-height:28px;}
+		#popup_container .popup_ok{ display:table;border-collapse: collapse;  margin:0 auto; text-align:center;}
+		#popup_container .popup_ok a{ display:block; float:left; background-color:#cc0000; width:150px; height:40px; line-height:40px; text-align:center; margin:0 20px; color:#fff; font-size:18px; border-radius:8px;}
+		#popup_container .popup_ok a:hover{background-color:#aa5151;}
+
+	</style>
+	<script type="text/javascript">
+		window.onload = window.onresize = function(){
+			//弹窗1
+			var oPop1 = document.getElementById('pop1');
+			oPop1.onclick = function(){
+				YAlert("警告对话框", "我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容", "我是按钮");
+			}
+			//弹窗2
+			var oPop2 = document.getElementById('pop2');
+			oPop2.onclick = function(){
+				YAlert("我是警告对话框标题", "我是内容");
+			}
+			//弹窗3
+			var oPop3 = document.getElementById('pop3');
+			oPop3.onclick = function(){
+				YAlert("我是内容我是内容");
+				//alert();
+			}
+		}
+
+		/*兼容ie8+，chrom，firefox*/
+		function YAlert(){
+			return new jAlert(arguments);
+		}
+		function jAlert(){
+			var _elements = arguments[0];
+			if(_elements.length == 1){
+				this.str2 = _elements[0];
+			}
+			else if(_elements.length == 2){
+				this.str1 = _elements[0];
+				this.str2 = _elements[1];
+			}
+			else{
+				this.str1 = _elements[0];
+				this.str2 = _elements[1];
+				this.str3 = _elements[2]
+			}
+			this.init();
+		}
+		jAlert.prototype = {
+			str1:"对话框",//标题
+			str2:null,//内容
+			str3:"确定",//按钮
+			init:function(){
+				this.show();//显示弹窗
+				this.layerout();//弹窗居中布局
+				this.popdrag();//弹窗拖拽
+				this.pophide();//隐藏弹窗
+				this.popUnkeydown();//屏蔽键盘事件
+			},
+			show:function(){
+				var popHtmlStr = 
+						'<div class="popup_close"><a href="javascript:;">X</a></div>' +
+						'<div class="popup_title">' + this.str1 +'</div>' +
+						'<div class="popup_content">' +
+							'<div class="popup_message"><p>' + this.str2 + '</p></div>' +
+						'</div>' +
+						'<div class="popup_ok"><a id="popupOk" href="javascript:;">' + this.str3 + '</a></div>';
+				this.popBg = document.createElement('div');
+				document.body.appendChild(this.popBg);
+				this.popBg.id = "popup_overlay"
+
+				this.popHtml = document.createElement('div');
+				document.body.appendChild(this.popHtml);
+				this.popHtml.id = "popup_container";
+				this.popHtml.innerHTML = popHtmlStr;
+				
+			},
+			layerout:function(){
+				var clientWidth = document.documentElement.clientWidth || document.body.clientWidth;
+				var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+				var bodyHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+				this.oPopupOverlay = $("popup_overlay")//背景id
+				this.oPopupContainer = $("popup_container");//弹窗id
+				this.oPopupOk = $("popupOk");//弹窗id
+				console.log(this.oPopupOverlay);
+				this.oPopupTitle =  getClass(this.oPopupContainer, "popup_title")[0];//右上侧关闭按钮
+				this.oPopupClose =  getClass(this.oPopupContainer, "popup_close")[0];//右上侧关闭按钮
+				this.oPopupOk =  getClass(this.oPopupContainer,"popup_ok")[0];//点击确定按钮*/
+
+				this.oPopupOverlay.style.height =  bodyHeight  + "px";
+				this.oPopupContainer.style.left = (clientWidth - parseInt(getStyle(this.oPopupContainer, "width"))) / 2 + "px";
+				this.oPopupContainer.style.top = (clientHeight - parseInt(getStyle(this.oPopupContainer, "height"))) / 2 + "px";
+			},
+			popdrag:function(){
+				var _this = this;
+				var disX = 0;
+				var disY = 0;
+				this.oPopupTitle.onmousedown = function(ev){
+					var oEvent = ev || event;
+					disX = oEvent.clientX - _this.oPopupContainer.offsetLeft;
+					disY = oEvent.clientY - _this.oPopupContainer.offsetTop;
+					document.onmousemove = function(ev){
+						var oEvent = ev || event;
+						var l = oEvent.clientX - disX;
+						var t = oEvent.clientY - disY;
+						_this.oPopupContainer.style.left = l + "px";
+						_this.oPopupContainer.style.top = t + "px";
+					}
+					document.onmouseup = function(){
+						document.onmousemove = null;
+						document.onmouseup = null;
+					}
+					return false;
+				}
+			},
+			popUnkeydown:function(){
+				var _this = this;
+				document.onkeypress = function(ev){
+					var oEvent = ev || event;
+					oEvent.target.blur(); // 改变input 按钮的焦点
+					if(!_this.popBg || !_this.popHtml) return false;
+					if(oEvent && oEvent.keyCode == 13 || oEvent.keyCode == 32){
+						//document.body.removeChild(_this.popBg);
+						//document.body.removeChild(_this.popHtml);
+						return false;
+					}
+				}
+			},
+			pophide:function(){
+				var _this = this;
+				this.oPopupClose.onclick = function(){
+					document.body.removeChild(_this.popBg);
+					document.body.removeChild(_this.popHtml);
+				}
+				this.oPopupOk.onclick = function(){
+					document.body.removeChild(_this.popBg);
+					document.body.removeChild(_this.popHtml);
+				}
+			}
+		}
+		function $(obj){
+			return document.getElementById(obj);
+		}
+		function getClass(oParent, sClass){
+			if(!oParent)return;
+			var elments = oParent.getElementsByTagName('*');
+			var arr = [];
+			for(var i = 0; i < elments.length; i++){
+				if(elments[i].className == sClass){
+					arr.push(elments[i]);
+				}
+			}
+			return arr;
+		}
+		function getStyle(obj, attr){
+			return obj.currentStyle ? obj.currentStyle[attr] : getComputedStyle(obj, false)[attr];
+		}
+	</script>
+</head>
+<body style="height:3000px">
+	<!-- <a id="pop1">点击弹出框1</a> -->
+	<input type="button" value="点击弹出框1" id="pop1">
+	<input type="button" value="点击弹出框2" id="pop2">
+	<input type="button" value="点击弹出框3" id="pop3">
+</body>
+</html>

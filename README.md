@@ -7,3 +7,5 @@
 - [dateSelect](https://github.com/yaob421123/JsPractice/tree/master/dateSelect)  jquery 日历下拉列表插件demo。
 
 - [select](https://github.com/yaob421123/JsPractice/tree/master/select)  jquery 下拉列表插件demo。
+
+- [alert](https://github.com/yaob421123/JsPractice/tree/master/alert)  javascript 模拟alert弹窗demo。
