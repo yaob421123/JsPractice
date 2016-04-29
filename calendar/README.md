@@ -29,3 +29,7 @@ $(function(){
 	});
 })
 ```
+
+## 效果图：
+
+![calendar](https://github.com/yaob421123/JsPractice/blob/master/calendar/calendar.gif)
