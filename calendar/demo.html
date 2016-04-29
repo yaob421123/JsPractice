@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="calendar.js"></script>
+	<style type="text/css">
+		*{ margin:0; padding:0; }
+		a{ text-decoration:none; }
+		ul,ol,li{ list-style-type:none; }
+		em,i{ font-style:normal; }
+		.date{ border:1px solid #ccc;  margin:50px auto;}
+		
+		.date-title{ height:40px; line-height:40px; background-color:#31c0e0; position:relative; text-align:center;}
+		.date-title a{color:#fff;position:absolute; display:inline-block; padding:0 20px;}
+		.prevMonth{  left:20px; }
+		.nextMonth{ right:20px; }
+		.date-title span{ color:#fff; }
+		.date-title .year{}
+		.date-week{ margin:0 10px;}
+		.date-week ul{ height:40px; clear:both; }
+		.date-week ul li{ width:14.28%; height:40px; line-height:40px; float:left; text-align:center; }
+		.date-Main{margin:0 10px;}
+		.date-Main ul li{width:14.28%; height:40px; line-height:40px; float:left; text-align:center;}
+		.date-Main ul li a{ color:#3a3937; display:block; width:30px; height:30px; line-height:30px; margin-top:5px; margin-left:5px;}
+		.date-Main ul li.active a{ background-color:#83d318; color:#fff; border-radius:100%;}
+		.date-Main ul li.active a:hover{background: #83d318;;}
+		.date-Main ul li a:hover{ background-color:#ccc; border-radius:100%;}
+		.date-Main .next-day a{ color:#ccc; }
+		.date-Main .next-day a:hover{ background: none; }
+	</style>
+</head>
+<body>
+	<div class="date">
+		<!-- <div class="date-title">
+			<a class="prevMonth" href="javascript:;">&#60</a>
+			<span><i class="year">2016</i>年<i class="month">1</i>月</span>
+			<a class="nextMonth" href="javascript:;">&#62</a>
+		</div>
+		<div class="date-week">
+			<ul>
+				<li>Sun</li>
+				<li>Mon</li>
+				<li>Tue</li>
+				<li>Wed</li>
+				<li>Thu</li>
+				<li>Fri</li>
+				<li>Sat</li>
+			</ul>
+		</div>
+		<div class="date-Main">
+			<ul>
+				<li class="next-day"><a href="javascript:;">1</a></li>
+				<li class="next-day"><a href="javascript:;">2</a></li>
+				<li class="next-day"><a href="javascript:;">3</a></li>
+				<li class="next-day"><a href="javascript:;">4</a></li>
+				<li class="active"><a href="javascript:;">5</a></li>
+				<li><a href="javascript:;">6</a></li>
+				<li><a href="javascript:;">7</a></li>
+				<li><a href="javascript:;">8</a></li>
+				<li><a href="javascript:;">9</a></li>
+				<li><a href="javascript:;">10</a></li>
+				<li><a href="javascript:;">11</a></li>
+				<li><a href="javascript:;">12</a></li>
+				<li><a href="javascript:;">13</a></li>
+				<li><a href="javascript:;">14</a></li>
+				<li><a href="javascript:;">15</a></li>
+				<li><a href="javascript:;">16</a></li>
+				<li><a href="javascript:;">17</a></li>
+				<li><a href="javascript:;">18</a></li>
+				<li><a href="javascript:;">19</a></li>
+				<li><a href="javascript:;">20</a></li>
+				<li><a href="javascript:;">21</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+				<li><a href="javascript:;">1</a></li>
+			</ul>
+		</div> -->
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".date").calendar();
+		})
+	</script>
+</body>
+</html>
