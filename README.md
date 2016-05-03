@@ -2,7 +2,7 @@
 
 记录工作及业余时间 js方面写的应用及插件。
 
-- [calendar](https://github.com/yaob421123/JsPractice/tree/master/calendar)  jquery 简介版日历demo。
+- [calendar](https://github.com/yaob421123/JsPractice/tree/master/calendar)  jquery 简单版日历demo。
 
 - [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect)  jquery 城市联动插件demo。 
 
@@ -12,4 +12,8 @@
 
 - [alert](https://github.com/yaob421123/JsPractice/tree/master/alert)  javascript 模拟alert弹窗demo。
 
+<<<<<<< HEAD
 - [suspension](https://github.com/yaob421123/JsPractice/tree/master/suspension)  jquery 悬浮插件demo。
+=======
+- [plug-demo](https://github.com/yaob421123/JsPractice/tree/master/plug-demo)  jquery 插件开发模式
+>>>>>>> 2e85e1d23d3e3d11d44687b69b2c2127ce86bcc9
