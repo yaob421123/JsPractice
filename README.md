@@ -11,3 +11,5 @@
 - [select](https://github.com/yaob421123/JsPractice/tree/master/select)  jquery 下拉列表插件demo。
 
 - [alert](https://github.com/yaob421123/JsPractice/tree/master/alert)  javascript 模拟alert弹窗demo。
+
+- [suspension](https://github.com/yaob421123/JsPractice/tree/master/suspension)  jquery 悬浮插件demo。
