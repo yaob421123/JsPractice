@@ -1,0 +1,56 @@
+<!DOCTYPE>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>jQuery省市联动效果</title>
+	<style type="text/css">
+	*{margin:0; padding:0;}
+	ol,ul,li{ list-style-type:none; }
+	input{ border:none; background:none; }
+	.basic-information-item label{ display:block; float:left; height:40px; line-height:40px; width:56px; padding-right: 15px; text-align:right;}
+	.basic-information-item{height:40px; line-height:40px; color:#323232; margin-bottom:15px; clear:both;}
+	.information-loan-city{  float:left; margin-right: 12px; position:relative;}
+	.information-loan-city .city-sheng, .information-loan-city .city-shi{border:1px solid #e5e5e5;width:205px; height:38px; border-radius:5px;behavior:url(../resource/css/PIE.htc); }
+	.information-loan-city input{font-size:14px; display:block; width:130px; float:left; height:36px; line-height:36px; padding:0 20px;}
+	/* .information-loan-city i{ float:right; color:#ff9600; padding-right: 10px;} */
+	.financing-loan-input{ float:left; width:548px; height:36px; line-height:36px;font-size:14px;  border:1px solid #e5e5e5; border-radius:5px;behavior:url(../resource/css/PIE.htc); padding:0 10px;}
+	.information-loan-city ul{ display:none; position:absolute; left:0; top:37px; width:205px;  border:1px solid #e5e5e5; background-color:#fff; z-index:9; border-top:none;border-radius: 0 0 5px 5px;behavior:url(../resource/css/PIE.htc); max-height:211px; min-height:211px; overflow-y: auto;}
+	.information-loan-city ul li{ height:35px; line-height:45px; padding-left:20px; cursor:pointer;}
+	.information-loan-city ul li:hover{ background-color:#f4f4f4; }
+	</style>
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/city.min.js"></script>
+	<script type="text/javascript" src="js/citySelect.js"></script>
+	<script	type="text/javascript">
+	$(function(){
+		$("#city-select1").CityScroll({
+			cityProvince : "#province", //省份
+            cityProper : "#proper" //市区
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="main">
+		<div class="basic-information-item" id="city-select1">
+			<label>地址</label>
+			<div class="information-loan-city">
+				<div class="city-sheng" id="province">
+					<input type="text" placeholder="请选择省份" readonly="readonly">
+					<!-- <i class="iconfont">&#xe638;</i> -->
+				</div>
+				<ul>
+				</ul>
+			</div>
+			<div class="information-loan-city">
+				<div class="city-shi" id="proper">
+					<input type="text" placeholder="请选择市/区" readonly="readonly">
+					<!-- <i class="iconfont">&#xe638;</i> -->
+				</div>
+				<ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
