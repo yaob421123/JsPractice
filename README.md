@@ -4,7 +4,9 @@
 
 - [calendar](https://github.com/yaob421123/JsPractice/tree/master/calendar)  jquery 简单版日历demo。
 
-- [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect)  jquery 城市联动插件demo。 
+- [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect)  jquery 城市联动插件demo`（ajax加载城市数据）`。 
+
+- [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect2)  jquery 城市联动插件demo`(未使用ajax)`。
 
 - [dateSelect](https://github.com/yaob421123/JsPractice/tree/master/dateSelect)  jquery 日历下拉列表插件demo。
 
