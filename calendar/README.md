@@ -11,7 +11,30 @@
 ```
 
 ## css:
-...
+```bash
+a{ text-decoration:none; }
+ul,ol,li{ list-style-type:none; }
+em,i{ font-style:normal; }
+.date{ border:1px solid #ccc;  margin:50px auto;}
+
+.date-title{ height:40px; line-height:40px; background-color:#31c0e0; position:relative; text-align:center;}
+.date-title a{color:#fff;position:absolute; display:inline-block; padding:0 20px;}
+.prevMonth{  left:20px; }
+.nextMonth{ right:20px; }
+.date-title span{ color:#fff; }
+.date-title .year{}
+.date-week{ margin:0 10px;}
+.date-week ul{ height:40px; clear:both; }
+.date-week ul li{ width:14.28%; height:40px; line-height:40px; float:left; text-align:center; }
+.date-Main{margin:0 10px;}
+.date-Main ul li{width:14.28%; height:40px; line-height:40px; float:left; text-align:center;}
+.date-Main ul li a{ color:#3a3937; display:block; width:30px; height:30px; line-height:30px; margin-top:5px; margin-left:5px;}
+.date-Main ul li.active a{ background-color:#83d318; color:#fff; border-radius:100%;}
+.date-Main ul li.active a:hover{background: #83d318;;}
+.date-Main ul li a:hover{ background-color:#ccc; border-radius:100%;}
+.date-Main .next-day a{ color:#ccc; }
+.date-Main .next-day a:hover{ background: none; }
+```
 
 ## js 部分：
 
