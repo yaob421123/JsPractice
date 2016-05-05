@@ -16,4 +16,6 @@
 
 - [suspension](https://github.com/yaob421123/JsPractice/tree/master/suspension)  jquery 悬浮插件demo。
 
+- [countdown](https://github.com/yaob421123/JsPractice/tree/master/countdown)  jquery 倒计时插件demo。
+
 - [plug-demo](https://github.com/yaob421123/JsPractice/tree/master/plug-demo)  jquery 插件开发模式。
