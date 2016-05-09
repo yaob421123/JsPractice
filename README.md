@@ -8,6 +8,8 @@
 
 - [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect2)  jquery 城市联动插件demo`(未使用ajax)`。
 
+- [citySelect](https://github.com/yaob421123/JsPractice/tree/master/citySelect3)  jquery ajax多次获取城市列表demo`(ajax加载城市数据)`。
+
 - [dateSelect](https://github.com/yaob421123/JsPractice/tree/master/dateSelect)  jquery 日历下拉列表插件demo。
 
 - [select](https://github.com/yaob421123/JsPractice/tree/master/select)  jquery 下拉列表插件demo。
