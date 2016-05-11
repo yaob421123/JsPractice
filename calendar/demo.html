@@ -92,7 +92,11 @@
 	</div>
 	<script type="text/javascript">
 		$(function(){
-			$(".date").calendar();
+			$(".date").calendar({
+				callback:function(arr){
+					console.log(arr)
+				}
+			});
 		})
 	</script>
 </body>
