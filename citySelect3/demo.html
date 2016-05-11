@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0; padding:0;}
+	ol,ul,li{list-style-type:none;}
+	div{ width:200px; float:left; }
+	</style>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var province_id,
+				city_id,
+				district_id,
+				province_text,
+				city_text,
+				district_text;
+
+			//初始化省份
+			$.ajax({
+				url: 'p.php?has=1',
+				type: 'POST',
+				dataType: 'json',
+				success: function(result){
+					var data = result.data.data;
+					var province_html = "";
+					for(var i = 0; i < data.length; i++){
+						province_html += '<li id="'+ data[i].id +'">'+ data[i].name +'</li>';
+					}
+					$(".province-ul ul").html(province_html);
+				}
+			});
+
+			//选中省份
+			$(".province-ul ul").on('click', 'li', function() {
+				province_id = $(this).attr('id');//获取选中省份id
+				console.log(province_id)
+				province_text = $(this).html();
+				$.ajax({
+					url: 'p.php?has=2&id='+province_id,
+					type: 'POST',
+					dataType: 'json',
+					success: function(result){
+						var city_html = "";
+						var data = result.data.data;
+						for(var i = 0; i < data.length; i++){
+							city_html += '<li id="'+ data[i].id +'">'+ data[i].name +'</li>';
+						}
+						$(".city-ul ul").html(city_html);
+					}
+				});
+			});	
+
+			//选中市级
+			$(".city-ul ul").on('click', 'li', function() {
+				city_id = $(this).attr('id'); //获取选中市级id
+				city_text = $(this).html();
+				$.ajax({
+					url: 'p.php?has=3&id='+city_id,
+					type: 'POST',
+					dataType: 'json',
+					success: function(result){
+						var district_html = "";
+						var data = result.data.data;
+						for(var i = 0; i < data.length; i++){
+							district_html += '<li id="'+ data[i].id +'">'+ data[i].name +'</li>';
+						}
+						$(".district-ul ul").html(district_html);
+					}
+				});
+			});
+			
+			//选择区，县
+			$(".district-ul ul").on('click', 'li', function() {
+				district_id = $(this).attr('id'); //获取选中市级id
+				district_text = $(this).html();
+				console.log(province_text,city_text,district_text);
+			});
+		})
+	</script>
+</head>
+<body>
+	<div class="province-ul">
+		<ul></ul>
+	</div>
+	<div class="city-ul">
+		<ul></ul>
+	</div>
+	<div class="district-ul">
+		<ul></ul>
+	</div>
+</body>
+</html>

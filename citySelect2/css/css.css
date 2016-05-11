@@ -1,0 +1,28 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style-type:none;
+}
+#main{
+	width:1120px;
+	margin:0 auto;
+	padding-top:50px;
+}
+
+
+.register_input{ margin:0 auto; clear:both; }
+.register_input_left{ float:left; text-align:right; width:300px; line-height:50px;}
+.register_input_right{ float:left ; width:540px; padding-left:20px;}
+.city_select{}
+.city_select .city_input{position:relative; width:170px;  float: left; height:50px; line-height:50px; border:1px solid #ddd;}
+.city_select .city1{margin-right:10px;}
+.city_select .select_list_input { width:170px; display:block; text-indent:1em; cursor:pointer;}
+.city_select i{position:absolute;  right:10px; top:3px;}
+.city_select .city-hidden{position:absolute; display:none; width:100%; border:1px solid #ddd; left:0; top:50px; margin-left: -1px; max-height:350px; overflow-y: auto;}
+.city_select .city-hidden li{display:block; width:100%; text-indent:1em; cursor:pointer;}
+.city_select .city-hidden li:hover{background-color:#f5f5f5; color:#222;}

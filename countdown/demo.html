@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="countdown.js"></script>
+</head>
+<body>
+	<div class="count">点击我倒计时<i></i></div>
+	<div class="count2">点击我倒计时<i></i></div>
+	<div class="count3">点击我倒计时<i></i></div>
+	<script type="text/javascript">
+		$(function(){
+			$('.count').CountDown(5, function(){
+
+			});
+
+			$('.count2').CountDown('10');
+
+			$('.count3').CountDown(function(){
+
+			});
+		})
+	</script>
+</body>
+</html>
