@@ -55,13 +55,13 @@ $(function(){
 
 ## API
 
--`weekDays` 可选。星期。默认`['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']`
+- `weekDays` 可选。星期。默认`['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']`
 
--`prevMonth` 可选。上一月。默认 `'&#60'`
+- `prevMonth` 可选。上一月。默认 `'&#60'`
 
--`nextMonth` 可选。下一月。默认 `'&#62'`
+- `nextMonth` 可选。下一月。默认 `'&#62'`
 
--`callback` 可选。回调函数。返回点击当前日期的，年月日。
+- `callback` 可选。回调函数。返回点击当前日期的，年月日。
 
 
 ## 效果图：
