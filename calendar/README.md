@@ -48,7 +48,10 @@ $(function(){
 		//可选参数
 		weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],  //week显示方式
 		prevMonth : '&#60', //左箭头
-		nextMonth : '&#62' //右箭头
+		nextMonth : '&#62', //右箭头
+		callback : function(arr){
+			console.log(arr);
+		}
 	});
 })
 ```
