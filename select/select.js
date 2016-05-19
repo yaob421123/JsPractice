@@ -17,6 +17,7 @@
         this.showboxClass =  this.options.showboxClass || "active";
         this.selectOption = this.elments.find("." + this.options.selectOption);
         this.optionClass =  this.options.optionClass || "hover";
+		this.callback = this.options.callback || '';
         this.init();
     }
     selectOption.prototype = {
@@ -62,7 +63,9 @@
             this.selectOption.find("li").on("click", function(){
                 var text = $(this).text();
                 _this.selectShowbox.text(text).removeClass(_this.showboxClass);
-                 _this.selectOption.hide();
+                _this.selectOption.hide();
+				if(_this.callback)_this.callback(text);
+				
             });
         },
         documentEvent:function(){

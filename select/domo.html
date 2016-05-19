@@ -14,7 +14,10 @@
 	            "selectOption":"select_option",/*下拉框区域*/
 	            /*下参数可写可不写*/
 	            "showboxClass":"active",/*显示区域点击后class,默认active*/
-	            "optionClass":"hover"/*下拉列表鼠标移入class，,默认hover*/
+	            "optionClass":"hover",/*下拉列表鼠标移入class，,默认hover*/
+				"callback" : function(value){
+					console.log(value)
+				}
 	        });
 		});
 		
