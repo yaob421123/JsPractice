@@ -37,3 +37,18 @@ $(function(){
 	});
 });
 ```
+
+
+
+## API
+
+- `selectShowbox`  显示区域class(非id)
+
+- `selectOption` 下拉框区域class(非id)
+
+- `showboxClass` 可选参数。显示区域点击后class
+
+- `optionClass` 可选参数。下拉列表鼠标移入状态class
+
+- `callback` 可选参数。返回当前选择的内容
+
