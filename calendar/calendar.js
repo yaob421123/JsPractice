@@ -16,7 +16,8 @@
 			height : 330,
 			weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 			prevMonth : '&#60',
-			nextMonth : '&#62'
+			nextMonth : '&#62',
+			callback: function(){}
 		};
 		this.elments = elments;
 		this.options = $.extend(true, obj, options || {});
@@ -24,6 +25,7 @@
 		this.year = nowDate.getFullYear();
 		this.month = nowDate.getMonth() + 1;
 		this.getDateday = nowDate.getDate(); //获取当前日期
+		this.callback = obj.callback;
 
 		this.dateHtml = 
 			'<div class="date-title">' +
@@ -45,6 +47,7 @@
     		this.layerout();
     		this.week();
     		this.dateMain(this.year, this.month);
+			this.change();
     	},
     	layerout : function(){
     		this.elments.css({
@@ -54,7 +57,6 @@
 			this.elments.append(this.dateHtml);
 			this.prevMonth();
 			this.nextMonth();
-
 
     	},
     	week : function(){
@@ -133,7 +135,7 @@
                 if(i == this.getDateday && this.year == year && this.month == month){
                     dateLi += '<li class="active" aid="'+ year+getNum(month) + getNum(i) +'"><a href="javascript:;">' +i+ '</a></li>';
                 }else{
-                    dateLi += '<li aid="'+ year+getNum(month) + getNum(i) +'"><a href="javascript:;">' +i+ '</a></li>';
+                    dateLi += '<li class="nowDate" aid="'+ year+getNum(month) + getNum(i) +'"><a href="javascript:;">' +i+ '</a></li>';
                 }
                 
             }
@@ -142,6 +144,17 @@
             }
             $(".date-Main").append('<ul>'+dateLi+'</ul>');
     	},
+		change:function(){
+			var _this = this;
+			this.elments.on("click",".nowDate", function(){
+				var str = $(this).attr('aid');
+				var nowYear = str.substring(0,4),
+					nowMonth = str.substring(4,6),
+					nowDay = str.substring(6,8) ;
+				var arr = [nowYear,nowMonth,nowDay];
+				_this.callback([nowYear,nowMonth,nowDay])
+			});
+		},
     	getNowDate : function(year, month){
     		//获取第N个月有多少天
     		var d = new Date(year, month, 0);

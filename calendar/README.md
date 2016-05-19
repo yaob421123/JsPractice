@@ -48,11 +48,28 @@ $(function(){
 		//可选参数
 		weekDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],  //week显示方式
 		prevMonth : '&#60', //左箭头
-		nextMonth : '&#62' //右箭头
+		nextMonth : '&#62', //右箭头
+		callback : function(arr){
+			console.log(arr);
+		}
 	});
 })
 ```
 
+## API
+
+- `weekDays` 可选。星期。默认`['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']`
+
+- `prevMonth` 可选。上一月。默认 `'&#60'`
+
+- `nextMonth` 可选。下一月。默认 `'&#62'`
+
+- `callback` 可选。回调函数。返回点击当前日期的，年月日。
+
+
 ## 效果图：
 
 ![calendar](https://github.com/yaob421123/JsPractice/blob/master/calendar/calendar.gif)
+
+
+
