@@ -76,6 +76,12 @@ define(['jquery'],function(){
 
 				_this.backcall(aid)
 			});
+			$(document).on("click", function(e){
+				var target  = $(e.target);
+		        if(target.closest(_this.elements).length == 0){
+		           slectUl.hide();
+		        } 
+            });
 		}
 	}
 });

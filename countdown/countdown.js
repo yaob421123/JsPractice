@@ -21,7 +21,7 @@
             this.num = num || 120;
         }
         this.callback = callback;
-        console.log(this.num)
+        //console.log(this.num)
 
         this.timer = null;
         this.init();
@@ -39,9 +39,11 @@
                 var $html = _this.elments.html();
                 _this.timer = setInterval(function(){
                     num --;
+					_this.elments.addClass('active');
                     _this.elments.find('i').html('(' +num+ ')'); 
                     if(num <= 0){
                         clearInterval(_this.timer);
+						_this.elments.removeClass('active');
                         _this.elments.find('i').html('');
                         _this.elments.css('pointer-events', 'auto')
                     }
