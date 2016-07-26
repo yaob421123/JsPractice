@@ -48,7 +48,7 @@
                         _this.elments.css('pointer-events', 'auto')
                     }
                 }, 1000);
-                if(_this.callback){}
+                if(_this.callback){_this.callback();}
             });
         }
     }

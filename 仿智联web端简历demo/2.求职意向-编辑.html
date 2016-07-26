@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>行行圈编辑简历页面</title>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+
+
+</head>
+<body>
+	<div class="resume_content_box">
+		<span class="tit" id="qzyx">求职意向</span>
+		<span class="tit_required">(必填)</span>
+	</div>
+	<div class="Resume_Box_Content_revise">
+		<ul>
+			<li class="select">
+				<b>工作性质</b>
+				<span id="Resume_XingZhi" class="Resume_Select_Info" data-info-type='1'>全职</span>
+			</li>
+			<li class="select">
+				<b>工作地点</b>
+				<span id="Resume_CanJia" class="Resume_Select_City" data-city-type='1'>选择</span>
+			</li>
+			<li class="select">
+				<b>期望薪金</b>
+				<span id="Resume_Money" class="Resume_Select_Info" data-info-type='2'>面议</span>
+			</li>
+			<li class="select">
+				<b>职位类别</b>
+				<span id="Resume_ZhiWei" class="Resume_Select_Job" >选择</span>
+			</li>
+			<li class="select">
+				<b>行业类别</b>
+				<span id="Resume_HangYe" class="Resume_Select_Info" data-info-type='3'>其他</span>
+			</li>
+			<li class="select">
+				<b>工作状态</b>
+				<span id="Resume_ZhuangTai" class="Resume_Select_Info" data-info-type='4'>其他</span>
+			</li>
+		</ul>
+	</div>
+	<div class="Resume_btn"><a href="#">保存</a></div>
+	<div id="Resume_Pop"></div>
+	<!-- 日期 -->
+	<div id="ResumeTime" class="Resume_Pop_close">
+	    <div class="btn">
+	        <span class="close">取消</span>
+	        <span class="finish">完成</span>
+	        <span class="noExp">无工作经验</span>
+	        <span class="timeNow">至今</span>
+	    </div>
+	    <div class="wrap">
+	        <div class="cloth"></div>
+	        <div class="swiper-container" id="ResumeTimeYear">
+	            <div class="swiper-wrapper">
+	            </div>
+	        </div>
+	        <div class="swiper-container" id="ResumeTimeMonth">
+	            <div class="swiper-wrapper">
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<!-- 地区 -->
+	<div id="Resume_HuKou_Select" class="Resume_Pop_close">
+		<div class="btn"><span class="close">取消</span></div>
+		<div class="wrap">
+			<div class="swiper-container swiper1" id="Resume_HuKou_SelectList">
+				<dl class="swiper-wrapper">
+				</dl>
+			</div>
+			<div class="swiper-container swiper2" id="Resume_HuKou_ShowList">
+				<dl class="swiper-wrapper">
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- 通用select -->
+	<div id="Resume_Info_Select" class="Resume_Pop_close">
+		<div class="btn"><span class="close">取消</span></div>
+		<div class="wrap">
+			<div class="swiper-container" id="Resume_Info_SelectList">
+				<dl class="swiper-wrapper">
+				</dl>
+			</div>
+		</div>
+	</div>
+	<!-- 职位类别 -->
+	<div id="Resume_Job_Select" class="Resume_Pop_close">
+		<div class="btn"><span class="close">取消</span></div>
+		<div class="wrap">
+			<div class="swiper-container" id="Resume_Job_SelectList_l">
+				<dl class="swiper-wrapper">
+				</dl>
+			</div>
+			<div class="Resume_JobType_ShowList" id="Resume_JobType_ShowList">
+				<div class="titBack">项目管理/项目协调</div>
+				<div class="swiper-container" id="Resume_Job_SelectList_r">
+					<dl class="swiper-wrapper">
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+						<dd class="swiper-slide">bbb</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/swiper.min.js"></script>
+	<script type="text/javascript" src="js/JSON.js"></script>
+	<script type="text/javascript" src="js/rusume.js"></script>
+</body>
+</html>

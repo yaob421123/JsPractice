@@ -1,0 +1,116 @@
+@charset "utf-8";
+/* CSS Document */
+
+.resume_percent{ height:0.45rem; line-height:0.45rem; background-color:#fff; border-bottom:1px solid #d5d5d5; padding:0 0.13rem; position:relative;}
+.resume_percent .tit{ font-size:0.14rem; height:0.45rem; line-height:0.45rem; position:absolute; left:0; top:0; width:0.8rem; padding-left: 0.13rem; z-index:2;}
+.resume_percent .con{ position:relative; left:0; right:0; width:100%; border-left:0.8rem solid #fff; border-right:0.4rem solid #fff; height:0.45rem;box-sizing:border-box;}
+.resume_percent .con .bg{ width:100%; height:0.08rem; background-color:#e6e6e6; border-radius:0.04rem; position:absolute; left:0; top:0.18rem;}
+.resume_percent .con .tianchong{ position:absolute; left:0; top:0.18rem;height:0.08rem;  background-color:#54FAFF;border-radius:0.04rem ; }
+.resume_percent .num{ font-size:0.12rem; height:0.45rem; line-height:0.45rem; position:absolute; right:0; top:0; width:0.3rem; padding-right: 0.13rem; z-index:2;}
+.resume_top_cont,.resume_content_box{ height:0.45rem; line-height:0.45rem; border-top:1px solid #d5d5d5; border-bottom:1px solid #d5d5d5; margin:0.15rem 0; background-color:#fff; padding:0 0.13rem; clear:both;}
+.resume_top_cont input{ width:2.3rem; height:0.45rem; line-height:0.45rem; float:left; font-size:0.14rem;}
+.resume_top_cont a.edit_icon, .resume_content_box a.edit_icon{ display:inline-block; float:right; color:#cc0000; background: url(../images/resume_icon13.png)no-repeat left center; background-size:0.12rem auto; padding-left:0.18rem; font-size:0.12rem;}
+.resume_content_box a.prompt{display:inline-block; float:right; color:#cc0000; background: url(../images/resume_icon8.png)no-repeat left center; background-size:0.12rem auto; padding-left:0.18rem; font-size:0.12rem;}
+.resume_content_box .tit_required{ color:#cc0000; font-size:0.1rem; }
+.resume_content_box{ margin: 0; }
+#grxx{ background: url(../images/resume_icon2.png)no-repeat left center;padding-left:0.16rem;background-size:0.12rem auto; }
+#qzyx{ background: url(../images/resume_icon3.png)no-repeat left center;padding-left:0.16rem;background-size:0.12rem auto; }
+#jybj{ background: url(../images/resume_icon4.png)no-repeat left center;padding-left:0.16rem;background-size:0.12rem auto; }
+#gzjl{background: url(../images/resume_icon5.png)no-repeat left center;padding-left:0.16rem;background-size:0.12rem auto; }
+.resume_box_content{ padding:0.05rem 0.13rem; background-color:#fff;border-bottom:1px solid #d5d5d5; margin-bottom:0.15rem ; position:relative;}
+.resume_box_content .operation_content{position:absolute; right:0.16rem; top:0.115rem;}
+.resume_box_content .operation_content a{width:0.2rem; height:0.2rem; text-align:center; line-height:0.2rem; display:inline-block; margin-left: 0.1rem;}
+.resume_box_content .operation_content .operation_btn1{  background: url(../images/resume_icon13.png)no-repeat center;background-size:0.14rem auto; }
+.resume_box_content .operation_content .operation_btn2{  background: url(../images/resume_icon_delete.png)no-repeat center;background-size:0.14rem auto; }
+.resume_box_content .list dt{ height:0.52rem;  }
+.resume_box_content .list .resume_per_info .headImg{ width:0.5rem; height:0.5rem; border-radius:100%; border:1px solid #e5e5e5;}
+.resume_box_content .list .resume_per_info .headImg img{ margin:0.02rem; display:block; width:0.46rem; height:0.46rem; }
+.resume_box_content .list .resume_per_info b.name{ display:block;  width:1.25rem; margin:0.05rem 0 0.06rem 0.15rem; color:#cc0000;} 
+.resume_box_content .list .resume_per_info em{ display:block; margin-left: 0.15rem; color:#555; font-size:0.12rem;}
+.resume_box_content .list .resume_per_info em b.sex{}
+.resume_box_content .list .resume_per_info em b.fg{ margin:0 0.06rem; }
+.resume_box_content .list .resume_per_info em b.chusheng{background: url(../images/resume_icon14.png)no-repeat left center;padding-left:0.16rem;background-size:0.12rem auto;}
+.resume_box_content .list dd{ height:0.3rem; line-height:0.3rem; clear:both; font-size:0.12rem;}
+.resume_box_content .list dd span{ float:left; width:0.9rem; color:#999; }
+.resume_box_content .list dd em{ color:#333; display:inline-block; float:left; width:1.9rem;height:0.3rem; overflow:hidden;}
+.resume_box_content .list .first em{ width:1.4rem; }
+.resume_box_content .list .info{ height:auto; overflow:hidden; }
+.resume_box_content .list .info em{ height:auto; line-height:0.22rem; margin-top:0.04rem;}
+
+.Resume_Box_Content_revise{ background-color:#f8f8f8;padding:0.05rem 0 0.13rem 0.18rem;  border-bottom:1px solid #d5d5d5; margin-bottom:0.15rem ;}
+.Resume_Box_Content_revise li{ height:0.5rem; line-height:0.5rem; border-bottom:1px solid #dcdcdc;}
+.Resume_Box_Content_revise li b{ float:left; font-size:0.14rem; }
+.Resume_Box_Content_revise li.file{  position:relative; background: url(../images/resume_icon1.png)no-repeat right center;padding-right:0.46rem;background-size:0.32rem auto;}
+.Resume_Box_Content_revise li.file span{ float:right; display:block; width:0.4rem; height:0.4rem; margin-top:0.05rem;}
+.Resume_Box_Content_revise li.file span img{ display:block; width:0.4rem; height:0.4rem; }
+.Resume_Box_Content_revise li.file input{ position:absolute; right:0; top:0; width:2rem; height:0.5rem; opacity:0; }
+.Resume_Box_Content_revise li.text,.Resume_Box_Content_revise li.sex{ padding-right: 0.22rem; }
+.Resume_Box_Content_revise li.text input{ float:right; text-align:right; height:0.5rem; line-height:0.5rem;  font-size:0.14rem; width:1.9rem;}
+.Resume_Box_Content_revise li.sex span{ float:right; display:inline-block;  height:0.3rem; line-height:0.3rem; text-align:right; padding:0 0.1rem 0 0.3rem; color:#c8c8c8; border-radius:0.05rem; margin: 0.1rem 0 0 0.08rem;}
+.Resume_Box_Content_revise li.sex span.m{ background: url(../images/resume_icon18.png)no-repeat 0.08rem 0.05rem #e0e4e6;background-size:0.15rem auto;}
+.Resume_Box_Content_revise li.sex span.n{ background: url(../images/resume_icon19.png)no-repeat 0.08rem 0.05rem #e0e4e6;background-size:0.15rem auto;}
+.Resume_Box_Content_revise li.sex span.m.h{ background-color:#2edb77; color:#fff;}
+.Resume_Box_Content_revise li.sex span.n.h{ background-color:#ff7588; color:#fff;}
+.Resume_Box_Content_revise li.select{position:relative; background: url(../images/resume_icon1.png)no-repeat right center;padding-right:0.46rem;background-size:0.32rem auto;}
+.Resume_Box_Content_revise li.select span{float:right; display:block; width:1.6rem; text-align:right; height:0.5rem; line-height:0.5rem; overflow:hidden; }
+.Resume_btn{ height:0.45rem; width:100%; margin-bottom:0.3rem; }
+.Resume_btn a{ display:block; width:70%; height:0.45rem; line-height:0.45rem; background-color:#cc0000; text-align:center; text-align:center; margin:0 auto; font-size:0.16rem; color:#fff; border-radius:0.225rem;}
+.Resume_Box_Content_revise li.job_description{ height:auto; padding-right:0.18rem;}
+.Resume_Box_Content_revise li.job_description textarea{ width:90%; max-width:90%; height:1.4rem; min-height:1.4rem; max-height: 1.4rem; padding:0.1rem 5%; line-height:0.22rem; font-size:0.13rem;}
+
+
+/* 日期 */
+#Resume_Pop{ width:100%; height:100%; position:fixed; left:0; top:0; right:0; bottom:0; background-color:#000; opacity:0.3; display:none;}
+#ResumeTime{ width:100%; height:0; /* height:3.5rem; */ position:fixed; left:0; bottom:0; background-color:#fff; }
+#ResumeTime.h{ height:3.5rem; }
+#ResumeTime .btn{ height:0.45rem; line-height:0.45rem; border-bottom:1px solid #e5e5e5; padding:0 0.16rem; clear:both;overflow:hidden; margin-bottom:0.1rem;}
+#ResumeTime .btn span{ display:inline-block; padding:0 0.15rem;  height:0.31rem; line-height:0.31rem; text-align:center; margin-top:0.07rem; border-radius:0.15rem; }
+#ResumeTime .btn span.close{ background-color:#fff; float:left; border:1px solid #dcdcdc; color:#cc0000;}
+#ResumeTime .btn span.finish{ background-color:#32a0ff; float:right; color:#fff;}
+#ResumeTime .btn .noExp, #ResumeTime .btn .timeNow{ display:none;background-color:#fbd953; float:right; color:#fff; margin-right:0.1rem;}
+#ResumeTime .wrap{ padding:0.15rem 0.5rem; position:relative; overflow:hidden; margin-bottom:0.1rem;}
+#ResumeTime .wrap .cloth{ position:absolute; top:1.145rem; left:0; height:0.35rem; width:100%; border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5; }
+#ResumeTime .wrap .swiper-container{ width:50%; float:left; text-align:center; height:2.35rem; }
+#ResumeTime .wrap .swiper-wrapper{ width:100%; }
+#ResumeTime .wrap .swiper-wrapper .swiper-slide{ height:0.35rem !important; line-height:0.35rem; margin-bottom:0 !important; }
+
+/* 城市列表 */
+#Resume_HuKou_Select,#Resume_Info_Select{width:100%;height:0; /* height:3.5rem; */ position:fixed; left:0; bottom:0; background-color:#fff;}
+#Resume_HuKou_Select.h{ height:3.5rem; }
+#Resume_HuKou_Select .btn, #Resume_Info_Select .btn{ height:0.45rem; line-height:0.45rem; border-bottom:1px solid #e5e5e5; padding:0 0.16rem; clear:both;overflow:hidden; }
+#Resume_HuKou_Select .btn span, #Resume_Info_Select .btn span{ display:inline-block; padding:0 0.15rem;  height:0.31rem; line-height:0.31rem; text-align:center; margin-top:0.07rem; border-radius:0.15rem; }
+#Resume_HuKou_Select .btn span.close, #Resume_Info_Select .btn span.close{ background-color:#fff; float:right; border:1px solid #dcdcdc; color:#cc0000;}
+#Resume_HuKou_Select .wrap, #Resume_Info_Select .wrap{ padding-bottom: 0.15rem; position:relative; overflow:hidden; margin-bottom:0.1rem; background-color:#e6e6e6;}
+#Resume_HuKou_Select .wrap .swiper-container{ width:50%; float:left; max-height:3rem;}
+#Resume_HuKou_Select .wrap .swiper-container dd{ padding-left:0.2rem; height:0.425rem; line-height:0.425rem; font-size:0.14rem;}
+#Resume_HuKou_Select .wrap .swiper1 dd{ border-bottom:1px solid #fff; background-color:#fff; }
+#Resume_HuKou_Select .wrap .swiper1 dd.h{ background-color:#f0f0f0; border-color:#f0f0f0; }
+#Resume_HuKou_Select .wrap .swiper2 dd{border-bottom:1px solid #ccc;background-color:#f0f0f0;}
+
+/* 下拉列表 */
+#Resume_Info_Select.h{ height:auto; max-height:3.5rem;}
+#Resume_Info_Select .wrap{ padding-bottom:0; margin-bottom:0;}
+#Resume_Info_Select .wrap .swiper-container{ max-height:3rem; }
+#Resume_Info_Select .swiper-slide{ padding:0 0.15rem; height:0.425rem; line-height:0.425rem; font-size:0.14rem; border-bottom:1px solid #dcdcdc; background-color:#fff;}
+#Resume_Info_Select .all-swiper-slide{ height:0.6rem; line-height:0.26rem; padding-top: 0.1rem;}
+#Resume_Info_Select .all-swiper-slide em{ display:inline-block; font-size:0.13rem; color:#c8c8c8;}
+
+/* 职位类别 */
+#Resume_Job_Select{width:100%;height:0; /* height:3.5rem; */ position:fixed; left:0; bottom:0; background-color:#fff;}
+#Resume_Job_Select.h{ height:3.5rem; }
+#Resume_Job_Select .btn{ height:0.45rem; line-height:0.45rem; border-bottom:1px solid #e5e5e5; padding:0 0.16rem; clear:both;overflow:hidden; }
+#Resume_Job_Select .btn span{ display:inline-block; padding:0 0.15rem;  height:0.31rem; line-height:0.31rem; text-align:center; margin-top:0.07rem; border-radius:0.15rem; }
+#Resume_Job_Select .btn span.close{ background-color:#fff; float:right; border:1px solid #dcdcdc; color:#cc0000;}
+#Resume_Job_Select .wrap{ padding-bottom: 0.15rem; position:relative; overflow:hidden; margin-bottom:0.1rem; background-color:#e6e6e6;}
+#Resume_Job_Select .wrap .swiper-container{ width:100%; float:left; max-height:3.05rem;}
+#Resume_Job_Select .wrap .swiper-container dd{ height:0.425rem; line-height:0.425rem; border-bottom:1px solid #dcdcdc; padding-left:0.15rem;}
+#Resume_Job_Select .wrap #Resume_Job_SelectList_l dd{ background:url(../images/resume_icon1.png) no-repeat right center #fff; background-size:0.3rem auto; }
+#Resume_Job_Select .wrap .Resume_JobType_ShowList{ position:absolute; left:100%; bottom:0; background-color:#e6e6e6;; width:100%;height:3.23rem; transform:translate(100%,0); transition: all 0.3s ease-out;}
+#Resume_Job_Select .wrap #Resume_JobType_ShowList.h{ transform:translate(0,0); -webkit-transform:translate(0,0); -moz-transform:translate(0,0); transition: all 0.3s ease-out; left:0px;}
+#Resume_Job_Select .wrap .Resume_JobType_ShowList .titBack{ height:0.425rem; line-height:0.425rem;background:url(../images/resume_icon12.png) no-repeat 0.15rem center #fff; background-size:0.1rem auto; text-align:center; font-size:0.16rem; border-bottom:2px solid #d2d2d2; position:relative; z-index:3;}
+#Resume_Job_Select .wrap #Resume_Job_SelectList_r dd{ background-color:#fff; }
+#Resume_Job_Select .wrap #Resume_Job_SelectList_r dd.h{ color:#cc0000; }
+#Resume_Job_Select .wrap #Resume_Job_SelectList_r { max-height:2rem; }
+
+
+

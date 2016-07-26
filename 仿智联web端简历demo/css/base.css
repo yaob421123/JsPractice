@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, section, article, aside, header, footer, nav, dialog, figure, hgroup, em, button ,a,input{ margin:0;padding:0;-webkit-tap-highlight-color: rgba(0,0,0,0)}
+html{-webkit-text-size-adjust:none; }
+html{font-size: 100px; }
+body{font-size: 0.14rem;}
+h1{font-size: 0.24rem;}
+body { background-color:#f0f0f0; font-family:  Microsoft YaHei,Arial, Helvetica,"\534E\6587\9ED1\4F53", sans-serif;}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */}
+a{text-decoration: none;}
+button,input{ background:none; border:0;}
+table {border-collapse:collapse;border-spacing:0;}
+ul,ol,li{list-style:none;}
+em,i,b{font-style:normal;}
+img{border:0;max-width:100%; -ms-interpolation-mode: bicubic; -moz-interpolation-mode:bicubic; -webkit-interpolation-mode:bicubic;}
+input,img{vertical-align:middle;}
+input,button,select,textarea{margin: 0; padding:0;-webkit-appearance:none;border:none;font-family: Microsoft YaHei;outline:0;}
+h1,h2,h3,h4,h5,h6 {font-weight:700;}
+strong {font-weight:700;}
+cite,em {font-style:normal;}
+b{ font-weight:normal; }
+
+
+.clearfix:after{content: ""; display: block; height: 0;clear: both;visibility: hidden;}
+.clearfix {/* 触发 hasLayout */zoom: 1;}
+.hide{display: none !important;}
+.show{display: block !important;}
+
+.f12{font-size:0.12rem;}
+.f16{font-size:0.16rem;}
+.tc{text-align: center;}
+.fr{float: right;}
+.fl{float: left;}
