@@ -36,6 +36,7 @@
         change : function(){
             var _this = this;
             this.elements.on('click', function() {
+				if($('input['+ _this.data +']').length <= 0)return;
                 var $input = $('input['+ _this.data +']').eq(0);
                 if($input.val() == ''){
                     alert('请输入手机号码');
