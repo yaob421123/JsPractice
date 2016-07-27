@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>新增手机验证</title>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="countdown2.js"></script>
+</head>
+<body>
+	<input type="text" data-count-down placeholder="请输入手机号码" value="21">
+	<input type="text" placeholder="请输入手机号码" value="22">
+	<div class="count">点击我倒计时<i></i></div>
+	<script type="text/javascript">
+		$(function(){
+			$('.count').CountDown({
+	            data:'data-count-down',
+	            dataToggle:'alert',
+	            num:5,
+	            callback:function(){
+	            	
+	            }
+	        });
+		})
+	</script>
+</body>
+</html>
