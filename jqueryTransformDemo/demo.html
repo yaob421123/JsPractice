@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://sys.shanghuiwangluo.com/www/resource/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<style type="text/css">
+		#content{ float:right; width:50px; height:50px; background-color:red; }
+	</style>
+	<div id="content"></div>
+	<script type="text/javascript">
+
+	$('#content').on('click',  function() {
+		console.log(1);
+		transformLeft($('#content'), 500);
+	})
+
+	function transformLeft(obj,num){
+		var props = 'transform WebkitTransform MozTransform OTransform msTransform'.split(' '),
+			prop,
+			el = document.createElement('div');
+		for(var i = 0, l = props.length; i < l; i++) {
+			if(typeof el.style[props[i]] !== "undefined") {
+				prop = props[i];
+				break;
+			}
+		}
+        obj[0].style.transition = prop + " 500ms ease-out";
+        obj[0].style[prop]="translateX(-"+num+"px)";
+    }
+	</script>
+</body>
+</html>
