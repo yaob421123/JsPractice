@@ -73,6 +73,7 @@
                 var prevYear = parseInt(_this.elments.find('.year').html()) - 1;
     			var nowMonth = parseInt(_this.elments.find('.month').html()) - 1;
                 if(nowMonth == 0){
+                    nowMonth = 12;
                     _this.elments.find('.year').html(prevYear)
                     _this.elments.find('.month').html(12);
                 }else{
@@ -90,6 +91,7 @@
     			var prevYear = parseInt(_this.elments.find('.year').html()) + 1;
                 var nowMonth = parseInt(_this.elments.find('.month').html()) + 1;
                 if(nowMonth == 13){
+                    nowMonth = 1;
                     _this.elments.find('.year').html(prevYear)
                     _this.elments.find('.month').html(1);
                 }else{
