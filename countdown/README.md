@@ -6,11 +6,11 @@
 
 ## js :
 
-导入 `jquery` 和 `countdown.js`
+导入 `jquery`
 
 
-## 参数说明1
-
+## countdown.js
+导入 countdown.js
 
 ```bash
 <div class="count">点击我倒计时<i></i></div>
@@ -27,7 +27,9 @@ $(function(){
 - `callback`  可选。事件执行后要执行的函数。
 
 
-## 参数说明2
+
+
+## countdown2.js
 
 导入 countdown2.js
 
