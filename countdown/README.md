@@ -20,7 +20,7 @@
 $(function(){
 	$('.count').CountDown(num, callback);
 })
-
+```
 
 - `num` 可选。倒计时时间(秒),默认120秒。
 
@@ -28,6 +28,8 @@ $(function(){
 
 
 ## 参数说明2
+
+导入 countdown2.js
 
 ```bash
 
@@ -56,8 +58,8 @@ $(function(){
 		}
 	});
 })
+```
 
-导入 countdown2.js
 
 - `type` 可选。插件类型，默认 phone， 可选mail。
 
